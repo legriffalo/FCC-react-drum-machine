@@ -1,12 +1,19 @@
 // import { useState } from 'react'
-
+import Header from './assets/components/header'
+import Footer from './assets/components/footer'
+import Button from './assets/components/button'
 import './App.css'
+
 
 function App() {
 
   return (
     <>
-      <p>first deploy</p>
+    <Header title="Drum Machine"></Header>
+    <Button id = "hey" label = "test"></Button>
+    <Button id = "hey" label = "test"></Button>
+
+    <Footer></Footer>
     </>
   )
 }
