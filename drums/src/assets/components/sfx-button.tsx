@@ -1,16 +1,22 @@
 import React from 'react';
+import useSound from 'use-sound';
 
 interface SfxButtonProps {
   id?:string;
   label?: string;
-  onClick?: () => void;
-  sound?:string;
+  soundAddress:string;
 }
 
-const SfxButton: React.FC<SfxButtonProps> = ({ id, label, onClick }) => {
+const SfxButton: React.FC<SfxButtonProps> = ({ id, label, soundAddress }) => {
+    const [playSound] = useSound(soundAddress);
+    
+const handleClick = () => {
+  playSound(); // playSound doesn't need to use the event, so we call it directly
+};
+
     return (
       <>
-      <div id = {id} className = "btn btn-primary" onClick={onClick}>
+      <div id = {id} className = "btn btn-primary" onClick={handleClick}>
           {label}
       </div>
       
