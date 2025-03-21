@@ -8,6 +8,9 @@ const KeyCheck: React.FC = () => {
     // Handle keydown event on the whole document
     const handleKeyDown = (event: KeyboardEvent) => {
       setKeyPressed(event.key); // Update the key that was pressed
+      if(event.key === "e"){
+        setKeyPressed("feeling triggered bro"); // Update the key that was pressed
+      }
     };
 
     // Add event listener for keydown on the document

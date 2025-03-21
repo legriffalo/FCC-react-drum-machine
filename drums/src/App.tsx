@@ -1,16 +1,18 @@
-// import { useState } from 'react'
+import { useState, useEffect } from 'react';
+import './App.css'
 import Header from './assets/components/header'
 import Footer from './assets/components/footer'
 import Button from './assets/components/button'
 import { SOUNDS } from './assets/sounds-data.ts';
-import './App.css'
-import SfxButton from './assets/components/sfx-button.tsx';
+// import SfxButton from './assets/components/sfx-button.tsx';
 import KeyCheck from './assets/components/key-check.tsx'
-import { useState, useEffect } from 'react';
+import SoundBoard from './assets/components/soundboard.tsx';
 
 interface Sound {
   id: string;
+  keyPrompt: string;
   audio: string;
+  label:string;
 }
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setSounds([ ...SOUNDS]);
-  }, [sounds]);  
+  }, []);  
   
   useEffect(() => {
     console.log(sounds); // Logs the updated sounds state
@@ -29,15 +31,16 @@ function App() {
   return (
     <>
     <Header title="Drum Machine"></Header>
-    <Button id = "hey" label = "test"></Button>
-    <Button id = "hey" label = "test"></Button>
+    <Button id = "share twitter" label = "share the beats"></Button>
 
-    <div>
+    {/* <div>
       {sounds.map((sound) => (
-        <SfxButton id = {sound.id} soundAddress = {sound.audio}></SfxButton>
+        <SfxButton id = {sound.id} soundAddress = {sound.audio}  label = {sound.label} ></SfxButton>
     ))}
-    </div>
+    </div> */}
 
+
+    <SoundBoard sounds = {sounds}></SoundBoard>
     <KeyCheck></KeyCheck>
     <Footer></Footer>
     </>
