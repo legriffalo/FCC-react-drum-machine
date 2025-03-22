@@ -36,7 +36,7 @@ function App() {
   
   return (
     <>
-    <div id = "drum-machine">
+    <div id = "drum-machine" className="h-full">
       <Header title="Drum Machine"></Header>
       <Button id = "share twitter" label = "share the beats"></Button>
 
