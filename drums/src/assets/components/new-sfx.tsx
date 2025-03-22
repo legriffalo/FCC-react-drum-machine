@@ -64,7 +64,7 @@ const NewSfxButton: React.FC<NewSfxButtonProps> = ({ id, label, keyPrompt,source
       };
     return (
       <>
-      <div  id = {id} data-used = {used} className = "drum-pad btn btn-warning rounded-xl w-1/3" onClick={()=>{ playSound(`${id}`)} }>
+      <div  id = {id} data-used = {used} className = "drum-pad btn btn-warning rounded-xl w-1/3 h-1/3" onClick={()=>{ playSound(`${id}`)} }>
       {label}
       <audio preload="auto" ref = {audioRef} data-drum = {id} id = {label} className = "clip" src={source} ></audio>
       </div>

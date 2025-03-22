@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ id, label, onClick }) => {
   return (
     <div className="">
-      <button id = {id} className="btn btn-md  btn-primary" onClick={onClick}>
+      <button id = {id} className = "mt-[3vh] btn btn-md  btn-primary" onClick={onClick}>
         {label}
       </button>
     </div>

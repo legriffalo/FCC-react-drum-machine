@@ -14,7 +14,7 @@ const AltSoundBoard: React.FC<AltSoundBoardProps> = ({ sounds, onUsedChange }) =
 
     return (
       <>
-         <div className='w-2/5'>
+         <div className='w-6/10 p-2 border rounded-xl'>
             {sounds.map((sound) => (
             <NewSfxButton onUsedChange = {onUsedChange} key = {sound.key} source = {sound.source} id = {sound.id} audio = {sound.audio}  label = {sound.label} keyPrompt = {sound.keyPrompt} ></NewSfxButton>
             ))}
