@@ -5,15 +5,15 @@ import Footer from './assets/components/footer'
 import Button from './assets/components/button'
 import { SOUNDS } from './assets/sounds-data.ts';
 // import SfxButton from './assets/components/sfx-button.tsx';
-import KeyCheck from './assets/components/key-check.tsx'
+// import KeyCheck from './assets/components/key-check.tsx'
 import AltSoundBoard from './assets/components/alt-soundboard.tsx';
 import InfoPanel from './assets/components/infopanel.tsx';
 
 interface Sound {
   id: string;
   keyPrompt: string;
-  audio: string;
   label:string;
+  source:string;
 }
 
 function App() {
@@ -40,20 +40,11 @@ function App() {
       <Header title="Drum Machine"></Header>
       <Button id = "share twitter" label = "share the beats"></Button>
 
-
-{/* <audio controls>
-  <source src="/assets/sounds/Heater-1.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-</audio> */}
-        {/* <div id = "display2" className='w-8/9 border'>
-          <SoundBoard sounds = {sounds}></SoundBoard>
-        </div> */}
-
-      <div id = "display" className='w-8/9 border flex flex-row gap-[10vw]'>
+      <div id = "display" className='m-auto mt-[2vh] h-[55vh] w-8/9 border flex flex-row gap-[5vw] p-5 rounded-xl'>
         <AltSoundBoard onUsedChange= {handleUsedChange} sounds = {sounds}></AltSoundBoard>
         <InfoPanel used = {used}></InfoPanel>
       </div>
-      <KeyCheck></KeyCheck>
+      {/* <KeyCheck></KeyCheck> */}
       <Footer></Footer>
     </div>
     </>
