@@ -10,9 +10,9 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
     
     return (
       <>
-         <div>
+         <div className='w-2/5'>
             {sounds.map((sound) => (
-            <SfxButton key = {sound.key} id = {sound.id} soundAddress = {sound.audio}  label = {sound.label} keyPrompt = {sound.keyPrompt} ></SfxButton>
+            <SfxButton key = {sound.key} id = {sound.id} audio = {sound.audio}  label = {sound.label} keyPrompt = {sound.keyPrompt} ></SfxButton>
             ))}
         </div>  
       </>

@@ -6,11 +6,11 @@ interface SfxButtonProps {
   id?:string;
   label?: string;
   keyPrompt:string;
-  soundAddress:string;
+  audio:string;
 }
 
-const SfxButton: React.FC<SfxButtonProps> = ({ id, label, soundAddress, keyPrompt }) => {
-    const [playSound] = useSound(soundAddress);
+const SfxButton: React.FC<SfxButtonProps> = ({ id, label, audio, keyPrompt }) => {
+    const [playSound] = useSound(audio);
     
   // Effect to add and remove global keyboard event listener
   useEffect(() => {
@@ -41,7 +41,7 @@ const SfxButton: React.FC<SfxButtonProps> = ({ id, label, soundAddress, keyPromp
 
     return (
       <>
-      <div id = {id} className = "btn btn-primary" onClick={handleClick}>
+      <div  id = {id} className = " drum-pad btn btn-warning rounded-xl w-1/3" onClick={handleClick}>
           {label}
       </div>
       

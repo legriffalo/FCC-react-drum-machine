@@ -6,7 +6,8 @@ import Button from './assets/components/button'
 import { SOUNDS } from './assets/sounds-data.ts';
 // import SfxButton from './assets/components/sfx-button.tsx';
 import KeyCheck from './assets/components/key-check.tsx'
-import SoundBoard from './assets/components/soundboard.tsx';
+import AltSoundBoard from './assets/components/alt-soundboard.tsx';
+import InfoPanel from './assets/components/infopanel.tsx';
 
 interface Sound {
   id: string;
@@ -17,6 +18,11 @@ interface Sound {
 
 function App() {
   const [sounds, setSounds] = useState<Sound[]>([]);
+  const [used,setUsed]= useState<string>('intial value')
+
+  const handleUsedChange = (newUsed: string): void => {
+    setUsed(newUsed);
+  };
 
 
   useEffect(() => {
@@ -30,19 +36,26 @@ function App() {
   
   return (
     <>
-    <Header title="Drum Machine"></Header>
-    <Button id = "share twitter" label = "share the beats"></Button>
-
-    {/* <div>
-      {sounds.map((sound) => (
-        <SfxButton id = {sound.id} soundAddress = {sound.audio}  label = {sound.label} ></SfxButton>
-    ))}
-    </div> */}
+    <div id = "drum-machine">
+      <Header title="Drum Machine"></Header>
+      <Button id = "share twitter" label = "share the beats"></Button>
 
 
-    <SoundBoard sounds = {sounds}></SoundBoard>
-    <KeyCheck></KeyCheck>
-    <Footer></Footer>
+{/* <audio controls>
+  <source src="/assets/sounds/Heater-1.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio> */}
+        {/* <div id = "display2" className='w-8/9 border'>
+          <SoundBoard sounds = {sounds}></SoundBoard>
+        </div> */}
+
+      <div id = "display" className='w-8/9 border flex flex-row gap-[10vw]'>
+        <AltSoundBoard onUsedChange= {handleUsedChange} sounds = {sounds}></AltSoundBoard>
+        <InfoPanel used = {used}></InfoPanel>
+      </div>
+      <KeyCheck></KeyCheck>
+      <Footer></Footer>
+    </div>
     </>
   )
 }
