@@ -40,7 +40,7 @@ function App() {
       <Header title="Drum Machine"></Header>
       <Button id = "share twitter" label = "share the beats"></Button>
 
-      <div id = "display" className='m-auto mt-[2vh] h-[55vh] w-8/9 border flex flex-row gap-[5vw] p-5 rounded-xl'>
+      <div id = "display" className='m-auto mt-[2vh] h-[55vh] w-8/9 text-xl border flex flex-row gap-[5vw] p-5 rounded-xl'>
         <AltSoundBoard onUsedChange= {handleUsedChange} sounds = {sounds}></AltSoundBoard>
         <InfoPanel used = {used}></InfoPanel>
       </div>
