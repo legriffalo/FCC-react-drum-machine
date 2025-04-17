@@ -8,29 +8,30 @@ import { FaReact } from 'react-icons/fa';
 import { SiDaisyui } from 'react-icons/si';
 
 const Footer: React.FC = () => {
-  return (
-    <div className = "fixed bottom-0 footer flex flex-row text-xl items-center sm:footer-horizontal bg-neutral text-neutral-content p-10">
-        <a href = 'https://github.com/legriffalo' target = "_blank">
+        return (
+          <div className="fixed left-0 bottom-0 h-[8vh] w-[100%] flex flex-row items-center text-white font-bold bg-neutral p-2 ">
+            
+            <div className='text-2xl flex flex-row ml-[2vh] gap-3'>
+                <a href="https://github.com/legriffalo" target="_blank">
                 <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a href = 'https://www.linkedin.com/in/nick-griffiths-7b139198/' target = "_blank" >
+                </a>
+                <a href="https://www.linkedin.com/in/nick-griffiths-7b139198/" target="_blank">
                 <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-
-        <div className= "ml-auto flex flex-row items-center w-1/5">
-                <p>tech stack</p> 
-                <FontAwesomeIcon icon={faGithub} />
-                <SiTypescript/>
-                <FaReact />
-                <RiTailwindCssLine/>
-                <SiDaisyui/>
-
+                </a>
                 </div>
+      
+            <div className="ml-auto flex flex-row items-center text-lg md:text-xl xs:w-1/2 md:w-1/3  gap-2 mr-1">
+              <p className="mr-1">tech stack</p>
+              <FontAwesomeIcon icon={faGithub} />
+              <SiTypescript />
+              <FaReact />
+              <RiTailwindCssLine />
+              <SiDaisyui />
+            </div>
+          </div>
+        );
+      };
 
-</div>
-
-  );
-};
 
 export default Footer;
 
