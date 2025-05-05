@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico?v=2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pebble orchestra </title>
+</head>
+
+<body>
+  <div id="splash" class="flex content-center">
+    <img class="spin" src="/images/splash.png">
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    const splash = document.getElementById("splash");
+    splash.addEventListener("pointerdown", () => {
+      splash.classList.add("hide");
+    });
+
+  </script>
+</body>
+
+</html>

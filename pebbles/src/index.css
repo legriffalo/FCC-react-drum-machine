@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#root{
+  margin-top: 15vh;
+  width:100vw;
+  height:85vh;
+}
+
+.spin {
+  animation: spin 7s linear infinite;
+  border-radius: 50%;
+  height:50vw;
+  width:50vw;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.hide{
+  display:none !important;
+}
+
+#splash{
+  background-image: url("/images/circus.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  /* background-color: black; */
+  height:83vh;
+  width:100vw;
+  position:fixed;
+  left:0;
+  top:10vh;
+  z-index:1;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.show{
+  filter: brightness(100%) grayscale(0.1) !important;
+
+}
+
+.c1{  
+  background-image: url('/images/pebble1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c2{  
+  background-image: url('/images/pebble2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c3{  
+  background-image: url('/images/pebble3.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c4{  
+  background-image: url('/images/pebble4.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c5{  
+  background-image: url('/images/pebble5.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c6{  
+  background-image: url('/images/pebble6.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c7{  
+  background-image: url('/images/pebble7.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c8{  
+  background-image: url('/images/pebble8.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.c9{  
+  background-image: url('/images/pebble9.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b1{  
+  background-image: url('/images/bpebble1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b2{  
+  background-image: url('/images/bpebble2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b3{  
+  background-image: url('/images/bpebble3.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b4{  
+  background-image: url('/images/bpebble4.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b5{  
+  background-image: url('/images/bpebble5.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b6{  
+  background-image: url('/images/bpebble6.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b7{  
+  background-image: url('/images/bpebble7.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b8{  
+  background-image: url('/images/bpebble8.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+.b9{  
+  background-image: url('/images/bpebble9.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: brightness(70%) grayscale(0.8);
+}
+
+

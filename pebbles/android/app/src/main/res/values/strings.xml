@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">pebbles</string>
+    <string name="title_activity_main">pebbles</string>
+    <string name="package_name">pebbles.orchestra.app</string>
+    <string name="custom_url_scheme">pebbles.orchestra.app</string>
+</resources>
